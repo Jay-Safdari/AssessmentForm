@@ -1,0 +1,85 @@
+<!-- src/app/immigration-form/immigration-form.component.html -->
+
+<form [formGroup]="immigrationForm" (ngSubmit)="onSubmit()">
+  <!-- Age -->
+  <input type="number" formControlName="age" placeholder="Age">
+
+  <!-- Country of Residence -->
+  <input type="text" formControlName="countryOfResidence" placeholder="Country of Residence">
+
+  <!-- Country of Citizenship -->
+  <input type="text" formControlName="countryOfCitizenship" placeholder="Country of Citizenship">
+
+  <!-- Marital Status -->
+  <input type="text" formControlName="maritalStatus" placeholder="Marital Status">
+
+  <!-- Children Under Age -->
+  <label>
+    <input type="checkbox" formControlName="childrenUnderAge"> Children under age
+  </label>
+
+  <!-- Language Skills - English -->
+  <fieldset formGroupName="languageSkills">
+    <legend>English Language Skills</legend>
+    <input type="text" formControlName="writing" placeholder="Writing">
+    <input type="text" formControlName="reading" placeholder="Reading">
+    <input type="text" formControlName="speaking" placeholder="Speaking">
+    <input type="text" formControlName="listening" placeholder="Listening">
+  </fieldset>
+
+  <!-- Language Skills - French -->
+  <fieldset formGroupName="french">
+    <legend>French Language Skills</legend>
+    <input type="text" formControlName="writing" placeholder="Writing">
+    <input type="text" formControlName="reading" placeholder="Reading">
+    <input type="text" formControlName="speaking" placeholder="Speaking">
+    <input type="text" formControlName="listening" placeholder="Listening">
+  </fieldset>
+
+  <!-- Education Completed -->
+  <label>
+    <input type="checkbox" formControlName="educationCompleted"> Education Completed
+  </label>
+
+  <!-- Work History -->
+  <label>
+    <input type="checkbox" formControlName="workHistory"> Work History
+  </label>
+
+  <!-- Express Entry Profile -->
+  <label>
+    <input type="checkbox" formControlName="expressEntryProfile"> Express Entry Profile
+  </label>
+
+  <!-- Canadian Job Offer -->
+  <label>
+    <input type="checkbox" formControlName="canadianJobOffer"> Canadian Job Offer
+  </label>
+
+  <!-- Friends or Family in Canada -->
+  <fieldset formGroupName="friendsOrFamilyInCanada">
+    <legend>Friends or Family in Canada</legend>
+    <label>
+      <input type="checkbox" formControlName="inManitoba"> In Manitoba
+    </label>
+    <label>
+      <input type="checkbox" formControlName="anywhereInCanada"> Anywhere in Canada
+    </label>
+  </fieldset>
+
+  <!-- Personal Net Worth -->
+  <input type="number" formControlName="personalNetWorth" placeholder="Personal Net Worth">
+
+  <!-- Contact Information -->
+  <fieldset formGroupName="contactInformation">
+    <legend>Contact Information</legend>
+    <input type="text" formControlName="firstName" placeholder="First Name">
+    <input type="text" formControlName="lastName" placeholder="Last Name">
+    <input type="email" formControlName="email" placeholder="Email">
+    <input type="text" formControlName="telephone" placeholder="Telephone">
+  </fieldset>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+
